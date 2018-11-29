@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    </style>
+
     <meta charset="UTF-8">
     <title>Title</title>
-    <img src="Bilder/Bilder/paper.jpg" height="480" width="640"/>
-    <img src="Bilder/Bilder/Rock.jpg" height="480" width="640"/>
-    <img src="Bilder/Bilder/Scissors.jpg" height="480" width="640"/>
+
+    <style>
+        #VS{
+            margin-bottom: 125px;
+        }
     </style>
 </head>
 
 
 <body>
 <h1>Stein, saks, papir</h1>
-
+<img id="Bilde" src="" height="480" width="640"/>
+<img id="VS" src="Bilder/Bilder/VS.jpg" height="200" width="200"/>
+<img id="Bilde2" src="" height="480" width="640"/>
 
 
 <div class="game">
 
     <script>
-        var papirBilde = document.getElementById(papirBilde);
-        var steinBilde = document.getElementById(steinBilde);
-        var saksBilde = document.getElementById(saksBilde);
+        var Bilde = document.getElementById("Bilde");
+        var Bilde2 = document.getElementById("Bilde2");
         // User choice
         var userChoice = prompt("Stein, saks eller papir?");
         if (! userChoice) {
@@ -81,8 +84,23 @@
         document.write("<br><hr><br>" + results);
 
         if (userChoice ==="stein"){
-document.getElementById(steinBilde)
- };
+            Bilde.src="Bilder/Bilder/Rock.jpg"
+        };
+        if (userChoice ==="papir"){
+            Bilde.src="Bilder/Bilder/paper.jpg"
+        };
+        if (userChoice ==="saks"){
+            Bilde.src="Bilder/Bilder/Scissors.jpg"
+        };
+        if (computerChoice ==="stein"){
+            Bilde2.src="Bilder/Bilder - Kopi/Rock2.jpg"
+        }
+        if (computerChoice ==="papir"){
+            Bilde.src="Bilder/Bilder - Kopi/paper2.jpg"
+        };
+        if (computerChoice ==="saks"){
+            Bilde.src="Bilder/Bilder - Kopi/Scissors2.jpg"
+        };
     </script>
 
 </div>
