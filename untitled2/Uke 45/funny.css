@@ -1,0 +1,21 @@
+#app{
+    background-color: plum;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    border: solid 1px purple;
+}
+
+#boks{
+    border: solid 1px purple;
+    text-align: center;
+    padding: 2%;
+}
+#divTeller{
+    font-size: 64px;
+}
+#skjema{
+    float: right;
+}

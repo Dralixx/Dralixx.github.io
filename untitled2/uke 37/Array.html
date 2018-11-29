@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<span id="spnResultat"></span>
+<button id="btnFilm">Film</button>
+<br>
+<button id="btnFilm2">3. Film</button>
+<br>
+<input id="inpFilm" type="text" placeholder="Skriv inn en film">
+<br>
+<button id="btnFilm3">Ferdig</button>
+
+<script>
+    var minArray = [" Kill Bill", " The Dark Knight", " Avengers: Infinity war", " It"]; //oppretter en array, som er en liste med "ting"
+
+    console.log(minArray[2]) //henter ut det tredje elementet i listen
+    // minArray.push("Hallo!") //legger til "Hallo!" i minArray
+    console.log(minArray); // skriver ut minArray i konsollen
+
+    var spnResultat = document.getElementById("spnResultat");
+    var inpFilm = document.getElementById("inpFilm");
+
+    var minAndreArray = [minArray, 23, "hallo"]; // definerer en variabel minAndreArray, som er en array
+    console.log(minAndreArray); // skriver ut minAndreArray i konsollen
+    console.log(minAndreArray[0][1]); // for å hente ut en verdi fra en array som ligger inni en annen array bruker vi to [] (indekser)
+
+    var btnFilm = document.getElementById("btnFilm");
+    var btnFilm2 = document.getElementById("btnFilm2");
+    var btnFilm3 = document.getElementById("btnFilm3");
+
+    btnFilm.onclick = function () {
+        document.write(minArray)
+    };
+    btnFilm2.onclick = function () {
+        document.write(minArray [2])
+    };
+    btnFilm3.onclick = function () {
+        document.write(minArray + ", " + inpFilm.value)
+    };
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Billetter</title>
+</head>
+<body>
+
+<script>
+    var navn = prompt("Ungdomsbillett, Voksenbillett, Pensjonsbillett eller Barnebillett?")
+
+    switch (navn) {
+        case "Ungdomsbillett":
+        case "ungdomsbillett":
+            document.write("25 kr")
+            break;
+//        case "Pensjonistbillett":
+//            document.write(20 kr)
+//            break;
+//         case "Barnebillett":
+//            document.write(20 kr)
+//           break;
+        case "Voksenbillett":
+        case "voksenbillett":
+            document.write("30 kr")
+            break;
+        default:
+            document.write("20 kr")
+    }
+
+</script>
+</body>
+</html>

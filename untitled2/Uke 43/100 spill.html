@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inpFelt" type="number">
+<div id="losning"></div>
+<script>
+    const inpFelt = document.getElementById("inpFelt");
+    const losning = document.getElementById("losning");
+    inpFelt.oninput = function () {
+        if (Number(inpFelt.value) === 0) {
+            losning.innerHTML = "tallet er null";
+        }
+            else if (inpFelt.value < 0) {
+                losning.innerHTML = "tallet er negativt"
+            }
+            else {
+                losning.innerHTML = "tallet er positivt"
+        }
+    }
+</script>
+</body>
+</html>

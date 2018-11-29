@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="button" type="button">
+Endre siden
+</button>
+Her står det tekst
+<script>
+    function endreStil (bf,sf,fs) {
+        document.body.style.backgroundColor = bf;
+        document.body.style.color = sf;
+        document.body.style.fontSize = fs + "px";
+    }
+    button.onclick = function () {
+        endreStil("white","black",14)
+    };
+
+    //function endreStil(backgrunnsfarge, skriftfarge, skriftstorrelse) {
+//    }
+</script>
+</body>
+</html>

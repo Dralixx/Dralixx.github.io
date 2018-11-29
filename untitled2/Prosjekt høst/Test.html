@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <img src="Bilder/Bilder/paper.jpg" height="480" width="640"/>
+    <img src="Bilder/Bilder/Rock.jpg" height="480" width="640"/>
+    <img src="Bilder/Bilder/Scissors.jpg" height="480" width="640"/>
+    </style>
+</head>
+
+
+<body>
+<h1>Stein, saks, papir</h1>
+
+
+
+<div class="game">
+
+    <script>
+        var papirBilde = document.getElementById(papirBilde);
+        var steinBilde = document.getElementById(steinBilde);
+        var saksBilde = document.getElementById(saksBilde);
+        // User choice
+        var userChoice = prompt("Stein, saks eller papir?");
+        if (! userChoice) {
+            // User choice was undefined
+            document.write("<p>Du har skrevet feil, prøv igjen</p>");
+        } else {
+            // Display user choice
+            document.write("<p>Du valgte" + " " + userChoice + "</p>");
+        }
+        // Computer choice
+        var computerChoice = Math.random();
+        if (computerChoice < 0.34) {
+            computerChoice = "stein";
+        } else if(computerChoice <= 0.67) {
+            computerChoice = "papir";
+        } else {
+            computerChoice = "saks";
+        }
+        // Display computer choice
+        document.write("<p>Computer valgte: " + " " + computerChoice + "</p>");
+        // Compare user choice vs computer choice
+        var compare = function(choice1,choice2) {
+            if (choice1 === choice2) {
+                return "Uavgjort";
+            }
+            if (choice1 === "stein") {
+                if (choice2 === "saks") {
+                    // rock wins
+                    return "Du vant!";
+                } else {
+                    // paper wins
+                    return "Du tapte";
+                }
+            }
+            if (choice1 === "papir") {
+                if (choice2 === "stein") {
+                    // paper wins
+                    return "Du vant!";
+                } else {
+                    // scissors wins
+                    return "Du tapte";
+                }
+            }
+            if (choice1 === "saks") {
+                if (choice2 === "stein") {
+                    // rock wins
+                    return "Du tapte";
+                } else {
+                    // scissors wins
+                    return "Du vant!";
+                }
+            }
+        };
+        // Run the compare function
+        var results = compare(userChoice,computerChoice);
+        // Display results
+        document.write("<br><hr><br>" + results);
+
+        if (userChoice ==="stein"){
+document.getElementById(steinBilde)
+ };
+    </script>
+
+</div>
+
+</body>
+</html>

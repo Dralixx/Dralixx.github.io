@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <title>Input</title>
+</head>
+<body>
+
+<h1>Validering av imput-felt ved å bruke if-setning</h1>
+<p>Skriv inn navn</p>
+
+<div>
+
+    <span>Navn:</span>
+    <input type="text" id="inpNavn">
+</div>
+
+<div id="divResultat">
+    Resultat
+</div>
+
+
+<script>
+    var inpNavn = document.getElementById("inpNavn");
+    var divResulat = document.getElementById("divResultat");
+
+    inpNavn.onkeyup = function () {
+        if (inpNavn.value.length < 4){
+            divResulat.innerHTML = "Navnet er for kort"
+        }
+        else{
+            divResulat.innerHTML = "Navnet er langt nok"
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>
