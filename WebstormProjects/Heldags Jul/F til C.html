@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id ="inpFelt">
+<button id ="btnRegnUt">Trykk for å regne ut</button>
+<span id="spnResultat"></span>
+<p>
+
+</p>
+<img src="Bilde/termometer.png" height="340" width="170"/>
+<script>
+    var btnRegnUt = document.getElementById("btnRegnUt");
+    var inpFelt = document.getElementById("inpFelt");
+    var spnResultat = document.getElementById("spnResultat");
+
+    btnRegnUt.onclick = function () {
+        spnResultat.innerHTML= (Number(inpFelt.value) - 32)*(5/9)
+    };
+</script>
+</body>
+</html>

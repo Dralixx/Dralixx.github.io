@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inpNavn" placeholder="Navn">
+<p>
+</p>
+<input id="inpProblem" placeholder="Problem">
+<p>
+</p>
+<button id="button">Ferdig</button>
+<div id="divProblem"></div>
+<script>
+    var inpNavn = document.getElementById("inpNavn");
+    var inpProblem = document.getElementById("inpProblem");
+    var button = document.getElementById("button");
+    var divProblem = document.getElementById("divProblem");
+
+    button.onclick = function () {
+        divProblem.innerHTML = `<p>${inpNavn.value}<p/>${inpProblem.value}`
+    };
+</script>
+</body>
+</html>

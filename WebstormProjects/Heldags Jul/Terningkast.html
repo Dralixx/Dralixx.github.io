@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">Kast terningene</button>
+<span id="spnResultat"></span>
+<img id="bilde1" src="" height="200" width="200"/>
+<img id="bilde2" src="" height="200" width="200"/>
+<script>
+    var btn = document.getElementById("btn");
+    var spnResultat = document.getElementById("spnResultat");
+    var terning1 = document.getElementById(terning1);
+    var terning2 = document.getElementById(terning2);
+    var bilde1 = document.getElementById(bilde1);
+    var bilde2 = document.getElementById(bilde2);
+
+    btn.onclick = function () {
+        terning1 = Math.ceil(Math.random()*6);
+        terning2 = Math.ceil(Math.random()*6);
+        if (terning1 === 1){
+            if (terning2 === 1){
+                spnResultat.innerHTML = "Beklager du fikk bare 2 denne gangen";
+            }
+        }
+        else if (terning1 === 6){
+            if (terning2 === 6){
+                spnResultat.innerHTML = "Gratulerer du fikk 12";
+            }
+        }
+        else {
+            spnResultat.innerHTML = "Du fikk " +  (terning1 + terning2)
+        };
+
+        if (terning1 === 1){
+            bilde1.src = "Bilde/dice1.png" //skjønner ikke hvorfor bildene ikke dukker opp
+        };
+        else if (terning1 === 2){
+            bilde1.src = "Bilde/dice2.png"
+        };
+        else if (terning1 === 3){
+            bilde1.src = "Bilde/dice3.png"
+        };
+        else if (terning1 === 4){
+            bilde1.src = "Bilde/dice4.png"
+        };
+        else if (terning1 === 5){
+            bilde1.src = "Bilde/dice5.png"
+        };
+        else{
+            bilde1.src = "Bilde/dice6.png"
+        };
+
+
+        if (terning2 === 1){
+            bilde2.src = "Bilde/dice1.png"
+        };
+        else if (terning2 === 2){
+            bilde2.src = "Bilde/dice2.png"
+        };
+        else if (terning2 === 3){
+            bilde2.src = "Bilde/dice3.png"
+        };
+        else if (terning2 === 4){
+            bilde2.src = "Bilde/dice4.png"
+        };
+        else if (terning2 === 5){
+            bilde2.src = "Bilde/dice5.png"
+        };
+        else bilde2.src = "Bilde/dice6.png"
+            };
+
+
+</script>
+</body>
+</html>

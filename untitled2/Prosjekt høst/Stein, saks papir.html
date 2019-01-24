@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        #VS{
+            margin-bottom: 125px;
+        }
+    </style>
 </head>
+
+
 <body>
 <h1>Stein, saks, papir</h1>
+<img id="Bilde" src="" height="480" width="640"/>
+<img id="VS" src="Bilder/Bilder/VS.jpg" height="200" width="200"/>
+<img id="Bilde2" src="Bilder/Bilder/Question_mark.svg" height="480" width="640"/>
+
 
 <div class="game">
-
     <script>
+        var Bilde = document.getElementById("Bilde");
+        var Bilde2 = document.getElementById("Bilde2");
         // User choice
         var userChoice = prompt("Stein, saks eller papir?");
         if (! userChoice) {
@@ -68,10 +82,19 @@
         // Display results
         document.write("<br><hr><br>" + results);
 
-
+        if (userChoice ==="stein"){
+            Bilde.src="Bilder/Bilder/Rock.jpg"
+        };
+        if (userChoice ==="papir"){
+            Bilde.src="Bilder/Bilder/paper.jpg"
+        };
+        if (userChoice ==="saks"){
+            Bilde.src="Bilder/Bilder/Scissors.jpg"
+        };
     </script>
 
 </div>
 
+<embed src="Lyd/Elevator Music - Vanoss Gaming Background Music HD.mp3">
 </body>
 </html>

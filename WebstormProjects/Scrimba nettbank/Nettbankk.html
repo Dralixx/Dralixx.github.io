@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inn" placeholder="Inn i kontoen"><button id="InnBtn">Confirm</button>
+<p>
+</p>
+<input id="ut" placeholder="Ut av kontoen"><button id="UtBtn">Confirm</button>
+<p>
+</p>
+Du har <span id="Total"></span> kr på kontoen din.
+<script>
+    var inn = document.getElementById("inn");
+    var ut = document.getElementById("ut");
+    var InnBtn = document.getElementById("InnBtn");
+    var UtBtn= document.getElementById("UtBtn");
+    var Total = document.getElementById("Total");
+
+    var saldo = 0;
+    Total.innerHTML = saldo;
+
+    InnBtn.onclick = function () {
+        saldo = saldo + Number(inn.value)
+        Total.innerHTML = saldo
+        inn.value = ""
+    };
+
+    UtBtn.onclick = function () {
+        saldo = saldo - Number(ut.value)
+        Total.innerHTML = saldo
+        ut.value = ""
+    };
+</script>
+</body>
+</html>
